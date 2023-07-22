@@ -15,6 +15,7 @@ body {
 .main-heading {
   color: white;
   font-family: 'Roboto flex', sans-serif;
+  font-weight: 400;
   font-size: 3em;
   margin-bottom: 1em;
   text-align: center;
@@ -50,3 +51,26 @@ body {
   transform: scale(1.03);
 }
 
+/* ====== BACK BUTTON STYLES ====== */
+.link-list {
+  display: flex;
+  justify-content: start;
+  padding: 1em;
+}
+.link-list__item {
+  flex: 0 0 auto;
+  font-size: 1.5em;
+  max-width: initial;
+  min-width: initial;
+  padding: 0.5em 1em;
+}
+.link__arrow {
+  display: inline-block;
+  animation: bounces 0.5s ease-in alternate infinite;
+  transform: scale(1.2) translateX(0%);
+}
+@keyframes bounces {
+  100% {
+    transform: scale(1.2) translateX(-30%);
+  }
+}

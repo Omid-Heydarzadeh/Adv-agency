@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid</title>
-    <style>
-      body {
-        background-color: #1d1d1d;
-      }
-    </style>
-    <link rel="stylesheet" href="./css/all-custom-styles.css" />
-    <script src="./js/all-custom-scripts.js"></script>
+    <link rel="stylesheet" href="./css/preview-styles.css" />
+    <link rel="stylesheet" href="./css/all-custom-styles-min.css" />
+    <script defer src="./js/all-custom-scripts-min.js"></script>
   </head>
   <body>
+    <header>
+      <nav class="link-list">
+        <a class="link-list__item" href="./index.html">
+          <span class="link__arrow">&larr;</span>
+          Back
+        </a>
+      </nav>
+    </header>
     <section id="services-section">
       <div class="services-wrapper">
         <div class="services-grid">
@@ -33,8 +43,16 @@
           </div>
           <div class="services-cell cell-marketing-shape shape">
             <div class="marketing-shape__wrapper">
-              <img class='marketing-shape__circle' src="./img/bits-circle.png" alt="">
-              <img class='marketing-shape__slice' src="./img/slice.png" alt="">
+              <img
+                class="marketing-shape__circle"
+                src="./img/bits-circle.png"
+                alt=""
+              />
+              <img
+                class="marketing-shape__slice"
+                src="./img/slice.png"
+                alt=""
+              />
             </div>
           </div>
           <div class="services-cell cell-seo-shape shape">
@@ -74,8 +92,7 @@
             </p>
           </div>
           <div class="services-cell cell-social-shape shape">
-            <div class="social-shape__rect">
-            </div>
+            <div class="social-shape__rect"></div>
             <div class="social-shape__wrapper">
               <div class="social-shape__triangle"></div>
             </div>
