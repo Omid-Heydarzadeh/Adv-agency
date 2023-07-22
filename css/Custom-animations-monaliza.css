@@ -1,0 +1,269 @@
+body {
+  overflow-x: hidden;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 90%;
+}
+
+.hero-images-container {
+  position: relative;
+  width: 70%;
+  aspect-ratio: 574 / 770;
+  cursor: pointer;
+}
+
+.alternate .hero-images-container {
+  cursor: auto;
+}
+
+@media only screen and (min-width: 50em) {
+  .hero-wrapper {
+    flex-direction: row-reverse;
+    margin: 0;
+  }
+
+  .hero-wrapper .hero-images-container {
+    flex: 1 0 40%;
+  }
+}
+
+.hero-image img {
+  position: absolute;
+  width: 80% !important;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+.hero-image__hint {
+  display: block;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 160%;
+  text-align: left;
+  font-size: clamp(1.2em, 2vw, 1.9em);
+}
+
+.hero-image__hint.step-two {
+  left: -20%;
+}
+
+@media only screen and (min-width: 30em) {
+  .hero-image__hint {
+    font-size: clamp(1.5em, 3vw, 1.9em);
+  }
+}
+
+/* ========== SHAPES ========== */
+.line {
+  border-top: 3px solid white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.h-line,
+.a-line {
+  height: 25%;
+  width: 110%;
+}
+.h-line1 {
+  top: 32%;
+  left: -5%;
+  transform: translate(0, -100%);
+}
+
+.h-line2 {
+  top: 50%;
+  transform: translate(0, 170%);
+}
+
+.v-line {
+  border-left: 3px solid white;
+  width: 0;
+  height: 73%;
+}
+
+.v-line1 {
+  left: 30%;
+  top: 11%;
+  transform: translate(0, 108%);
+}
+
+.v-line2 {
+  left: 44.5%;
+  top: 11%;
+  transform: translate(0, -110%);
+}
+
+.v-line3 {
+  left: 60%;
+  top: 11%;
+  transform: translate(0, 110%);
+}
+
+.a-line1-wrapper {
+  position: absolute;
+  top: 42%;
+  left: -2%;
+  width: 100%;
+  height: 50%;
+  transform: translate(72%, 60%);
+}
+.a-line1 {
+  width: 120%;
+  transform: rotate(47deg);
+}
+
+.a-line2-wrapper {
+  position: absolute;
+  top: 68%;
+  left: -5%;
+  width: 100%;
+  height: 50%;
+  transform: translate(-33%, -139%);
+}
+
+.a-line2 {
+  width: 140%;
+  transform: translateX(-5%) rotate(20deg);
+}
+
+.circle {
+  position: absolute;
+  outline: 3px solid white;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.head-circle {
+  width: 38%;
+  left: 30%;
+  top: 15%;
+  transform: translate(-120%, -60%);
+}
+
+.side-circle {
+  width: 49%;
+}
+
+.left-circle {
+  top: 23.5%;
+  left: -16.15%;
+  transform: translate(216%, -40%);
+}
+
+.right-circle {
+  top: 23%;
+  left: 70%;
+  transform: translate(-225%, -80%);
+}
+
+.body-circle {
+  width: 77%;
+  top: 48%;
+  left: 13%;
+  transform: translate(70%, 50%);
+}
+
+.h-line1,
+.h-line2,
+.v-line1,
+.v-line2,
+.v-line3,
+.a-line1-wrapper,
+.a-line2-wrapper,
+.head-circle,
+.left-circle,
+.right-circle,
+.body-circle {
+  animation: reset 3s 2s forwards ease-in;
+}
+
+@keyframes reset {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .line {
+    border-top: 2px solid white;
+  }
+  .v-line {
+    border-left: 2px solid white;
+  }
+  .circle {
+    outline: 2px solid white;
+  }
+}
+
+/* ========== TITLE ========== */
+.hero-title h1 {
+  position: relative;
+  color: #d1d1d1;
+  font-size: clamp(1.3em, calc(0.2em + 10vw), 92px);
+  font-weight: 400;
+  margin: 1em 0;
+}
+
+.hero-title__content {
+  display: block;
+  text-align: center;
+  user-select: none;
+  cursor: default;
+}
+
+@media only screen and (min-width: 50em) {
+  .hero-title h1 {
+    font-size: clamp(1.3em, calc(0.2em + 5vw), 92px);
+    margin: 1em;
+  }
+  .hero-title__content {
+    text-align: left;
+  }
+}
+
+.hero-title__content.step-two {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.hero-title__content .crimson {
+  color: #7f0024;
+}
+
+/* ======== STEPS ======== */
+
+.step-two {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.alternate .step-one {
+  opacity: 0;
+}
+
+.alternate .step-two {
+  display: block;
+  opacity: 1;
+}
+
+.hero-title__content.step-one {
+  transition: opacity 1s 1s ease-in;
+}
+
+.hero-title__content.step-two {
+  transition: opacity 1s 2s ease-in;
+}

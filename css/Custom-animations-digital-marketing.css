@@ -1,0 +1,126 @@
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 31em) {
+  .hero__wrapper {
+    top: -100px;
+    margin: 0 auto -90px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero__bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.hero__bg img {
+  max-width: 71vw;
+  max-height: 100vh;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0;
+}
+
+.hero__title {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  font-size: clamp(0.5em, calc(0.2rem + 6vw), 6em);
+}
+
+.hero__title h1 {
+  font-size: 1em;
+  margin: 0;
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.hero__title .hero__content {
+  color: #fff;
+  display: block;
+  text-align: left;
+}
+
+.hero__cover {
+  outline: 3px solid brown;
+  position: absolute;
+  inset: 0;
+  transform-origin: center 70%;
+}
+
+.hero-cover__image {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.hero__hint {
+  position: absolute;
+  color: #fff;
+  font-size: clamp(1em, 3vw, 2.8em);
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* ======== ANIMATION ======== */
+
+.alternate .hero__cover {
+  animation: scaleAndFade 2s forwards ease-in-out;
+}
+
+@keyframes scaleAndFade {
+  95% {
+    opacity: 0;
+    transform: scale(7);
+  }
+  99% {
+    opacity: 0;
+    transform: scale(7);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(7);
+  }
+}
+
+.alternate .hero__bg img {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.alternate .hero__hint {
+  opacity: 0;
+  transition: opacity 2s ease-in-out; 
+}
+
+.alternate .hero__title h1 {
+  opacity: 1;
+  transform: translate(0);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}

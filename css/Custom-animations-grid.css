@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.services-wrapper {
+  width: clamp(72vw, calc(70vw + 4.8rem), 90vw);
+  margin: auto;
+  color: #fff;
+}
+
+/* ======== TYPOGRAPHY ======== */
+
+.services-grid h3 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 50em) {
+  .services-grid h3 {
+    font-size: 3.2em;
+    margin-bottom: 0.6em;
+  }
+
+  .services-grid p {
+    font-size: 1.3em;
+  }
+}
+
+/* ======== GRID ======== */
+
+.services-grid {
+  color: #c8c8c8;
+  display: grid;
+  grid-template-columns: 1fr 10vw 1fr;
+  grid-template-areas:
+    'marketing marketing marketing-shape'
+    'seo-shape     seo         seo'
+    'social     social    social-shape';
+  gap: 4em 2em;
+  align-items: center;
+  margin: 3em auto;
+}
+
+@media screen and (max-width: 50em) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(10px, fit-content));
+    grid-template-areas:
+      'marketing-shape'
+      'marketing'
+      'seo-shape'
+      'seo'
+      'social-shape'
+      'social';
+    gap: 0;
+  }
+
+  .shape {
+    margin: 6em 0 0;
+  }
+}
+
+/* ======== GRID CELLS ======== */
+
+.services-cell {
+  padding: 0 1em;
+  position: relative;
+}
+
+.services-cell.shape {
+  padding: 0;
+}
+
+/* ======== MARKETING CELLS ======== */
+
+.cell-marketing {
+  grid-area: marketing;
+}
+
+.cell-marketing-shape {
+  grid-area: marketing-shape;
+}
+
+.marketing-shape__wrapper {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+}
+/* @media screen and (max-width: 50em) {
+} */
+
+.marketing-shape__circle {
+  width: 100%;
+}
+
+.marketing-shape__slice {
+  position: absolute;
+  width: 25%;
+  left: 65%;
+  top: -10%;
+}
+
+.animate .marketing-shape__slice {
+  transform: translate(-54%, 81%) rotate(36deg);
+}
+
+/* ======== SEO CELLS ======== */
+
+.cell-seo {
+  grid-area: seo;
+}
+
+.cell-seo-shape {
+  position: relative;
+  grid-area: seo-shape;
+  margin-bottom: 4em;
+}
+
+@media screen and (max-width: 50em) {
+  .seo-shape__wrapper {
+    position: relative;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.seo-shape__circle--outer {
+  box-sizing: content-box;
+  position: relative;
+  width: 60%;
+  padding-top: 60%;
+  margin: auto;
+  background-color: #b6d100;
+  border-radius: 50%;
+}
+
+.seo-shape__circle--inner {
+  box-sizing: content-box;
+  position: absolute;
+  background-color: #1d1d1d;
+  border-radius: 50%;
+  width: 78%;
+  padding-top: 78%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seo-shape__handle {
+  background-color: #b6d100;
+  height: 50%;
+  width: calc(60% * 0.13);
+  position: absolute;
+  border-radius: 9999px;
+  top: -15%;
+  left: 46%;
+}
+
+.animate .seo-shape__handle {
+  transform: translate(-370%, 180%) rotate(45deg);
+}
+
+/* ======== SOCIAL CELLS ======== */
+
+.cell-social {
+  grid-area: social;
+}
+
+.cell-social-shape {
+  position: relative;
+  grid-area: social-shape;
+  aspect-ratio: 2 / 1;
+}
+
+.social-shape__rect {
+  position: relative;
+  width: 66%;
+  padding-top: 50%;
+  background-color: #7f0024;
+  border-radius: 12.5% / 16%;
+  margin: auto;
+  transform: translate(15%) rotate(10deg);
+}
+
+.animate .social-shape__rect {
+  transform: translate(0) rotate(0);
+}
+
+.social-shape__wrapper {
+  transform-origin: 10% 0;
+  transform: rotate(-30deg);
+}
+
+.animate .social-shape__wrapper {
+  transform: rotate(0);
+}
+
+.social-shape__triangle {
+  border-style: solid;
+  border-color: #7f0024 transparent;
+  border-width: 7.5vw 6vw 0 6vw;
+  width: 12vw;
+  margin: auto;
+  transform: translate(-250%, 80%);
+}
+
+@media screen and (min-width: 50em) {
+  .social-shape__triangle {
+    border-width: 4vw 3vw 0 3vw;
+    width: 6vw;
+  }
+}
+
+.animate .social-shape__triangle {
+  transform: translate(0);
+}
+
+.marketing-shape__slice,
+.seo-shape__handle,
+.social-shape__rect,
+.social-shape__triangle {
+  transition: transform 1s ease-in-out;
+}
