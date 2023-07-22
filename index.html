@@ -10,74 +10,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>X Agency</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-      }
-      body {
-        background-color: #020115;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        place-content: center;
-        margin: 0 auto;
-        padding: 2em;
-        max-width: 87.5em;
-        min-height: 100vh;
-      }
-      .main-heading {
-        color: white;
-        font-family: 'Roboto flex', sans-serif;
-        font-size: 3em;
-        margin-bottom: 1em;
-        text-align: center;
-      }
-      .link-list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1em;
-      }
-      .link-list__item {
-        background-color: rgba(255, 159, 124, 0.133);
-        border-radius: .5em;
-        border: 2px solid;
-        color: orangered;
-        flex: 1 0 25%;
-        font-family: Poppins, sans-serif;
-        font-size: 2em;
-        font-style: italic;
-        font-weight: 300;
-        max-width: 18em;
-        min-width: max-content;
-        padding: .5em;
-        text-align: center;
-        text-decoration: none;
-        transition: all .15s ease-in;
-      }
-      .link-list__item:hover {
-        background-color: orangered;
-        color: #020115;
-        transform: scale(1.03);
-      }
-    </style>
+    <link rel="stylesheet" href="./css/preview-styles.css" />
+    <link rel="stylesheet" href="./css/all-custom-styles.css" />
   </head>
   <body>
-    <main>
-      <h1 class='main-heading'>Links of preview sections on different pages</h1>
+    <main class="preview-page">
+      <h1 class="main-heading">Links of preview sections on different pages</h1>
       <section>
-        <nav class='link-list'>
-          <a class='link-list__item' href="./woolen.html">Home Page</a>
-          <a class='link-list__item' href="./monaliza.html">Studio</a>
-          <a class='link-list__item' href="./digital-marketing.html">Digital Marketing</a>
-          <a class='link-list__item' href="./grid.html">Grid Section</a>
-          <a class='link-list__item' href="./about-us.html">About us Page</a>
+        <nav class="main-link-list">
+          <a class="main-link-list__item" href="./woolen.html">Home Page</a>
+          <a class="main-link-list__item" href="./monaliza.html">Studio</a>
+          <a class="main-link-list__item" href="./digital-marketing.html"
+            >Digital Marketing</a
+          >
+          <a class="main-link-list__item" href="./grid.html">Grid Section</a>
+          <a class="main-link-list__item" href="./about-us.html"
+            >About us Page</a
+          >
         </nav>
       </section>
     </main>
